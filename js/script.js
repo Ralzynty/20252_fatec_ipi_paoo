@@ -1,13 +1,38 @@
-function saudacoesFactory(saudacao, nome){
-    return function(){
-        console.log(`${saudacao}, ${nome}`)
+// objeto Javascript não é sinônimo de Objeto JSON (Javascript Object Notation), mas são parecidos
+// Uma pessoa se chama Maria, tem 31 anos e mora na Rua B, número 121
+let pessoa = {
+    nome: 'Maria',
+    idade: 21,
+    endereco: {
+        logradouro: 'Rua B',
+        numero: 121
     }
 }
 
-let olaJoao = saudacoesFactory('ola', 'joao')
-let tchauJoao = saudacoesFactory('tchau', 'joao')
-olaJoao()
-tchauJoao()
+console.log('Me chamo ' + pessoa.nome)
+console.log('Minha idade é '+ pessoa.idade)
+console.log('Moro na ' + pessoa.endereco.logradouro)
+console.log('Número ' + pessoa['endereco']['numero'])
+
+// uma pessoa se chama João e tem 17 anos
+// let pessoa = {
+//     nome: 'João',
+//     idade: 17
+// }
+
+// console.log('Me chamo ' + pessoa.nome)
+// console.log('Minha idade é ' + pessoa['idade'])
+
+// function saudacoesFactory(saudacao, nome){
+//     return function(){
+//         console.log(`${saudacao}, ${nome}`)
+//     }
+// }
+
+// let olaJoao = saudacoesFactory('ola', 'joao')
+// let tchauJoao = saudacoesFactory('tchau', 'joao')
+// olaJoao()
+// tchauJoao()
 
 // function ola(){
 //     let nome = 'João'
